@@ -10,7 +10,7 @@ exports.create = (req, res) => {
         name: req.body.user_name,
         email: req.body.user_mail,
         gender: req.body.radioSexo,
-        birthdate: req.body.user_birth 
+        birthdate: req.body.user_birth
     })
 
     try {
@@ -23,12 +23,31 @@ exports.create = (req, res) => {
 }
 
 
-exports.find = (req, res) => {
-
+exports.find = async (req, res) => {
+    try {
+        const user = await UserDB.find()
+        res.send(user)
+    } catch (error) {
+        res.status(500).send({message: `Error: ${error}` || 'Error while finding user'})
+    }
 }
 
-exports.update = (req, res) => {
+exports.update = async (req, res) => {
+    if (!req.body) {
+        return res.status(400).send({message: `Empty data on update operation!`})
+    }
 
+    try {
+        const id = req.params.id
+        const user = await UserDB.findByIdAndUpdate(id, req.body)
+        if (!user) {
+            res.status(404).send({message: `Error while updating user with id ${id}.`})
+        } else {
+            res.send(user)
+        }
+    } catch (error) {
+        res.status(500).send({message: `Error User.update(): ${error}`})
+    }
 }
 
 exports.delete = (req, res) => {
