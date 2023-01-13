@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --cor0: #506775;
+    --cor1: #2D5975;
+    --cor2: #4994C2;
+    --cor3: #5DBBF5;
+    --cor4: #A8D8F7;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    background-color: var(--cor1);
+    height: 100px;
+}
+
+header > h1 {
+    text-align: center;
+    color: white;
+    padding-top: 25px;
+    font-family: 'Righteous', cursive;
+}
+
+#btBack {
+    padding: 5px;
+    display: flex;
+    text-decoration: none;
+    color: var(--cor1);
+    transition: 0.2s;
+}
+
+#btBack span {
+    padding-right: 5px;
+    font-size: 1.5em;
+}
+
+#btBack:hover {
+    font-size: 1.4em;
+    transition: 0.2s;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    font: bold 0.95em 'PT Serif', serif;
+}
+
+main h2 {
+    text-align: center;
+}
+
+main p {
+    text-align: center;
+    color: rgb(73, 73, 73);
+    font-size: 0.85em;
+    padding: 5px;
+}
+
+section#insertUser {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+#dinputs {
+    padding: 10px;
+}
+
+div.input {
+    padding: 10px;
+}
+
+div.input label {
+    padding-right: 20px;
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+div.input input {
+    padding: 3px;
+}
+
+#submitInput {
+    border: none;
+    background-color: var(--cor2);
+    border-radius: 10px;
+    transition: 0.2s;
+    font: lighter 1.1em 'Source Code Pro', monospace;
+    padding: 7px;
+    display: block;
+    margin: auto;
+    color: white;
+}
+
+#submitInput:hover {
+    cursor: pointer;
+    background-color: var(--cor3);
+    padding: 10px;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+#scadastro label {
+    font: 0.95em 'PT Serif', serif;
+}
+
+footer {
+    background-color: var(--cor0);
+    padding: 7px;
+    position: fixed;
+    width: 100vw;
+    bottom: 0px;
+}
+
+footer > p {
+    text-align: center;
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+}
+
+footer > p > a {
+    text-decoration: none;
+    color: var(--cor3);
+}
+
+footer a:visited {
+    color: var(--cor3);
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor4);
+}

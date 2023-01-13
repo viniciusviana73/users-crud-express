@@ -1,0 +1,251 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --cor0: #506775;
+    --cor1: #2D5975;
+    --cor2: #4994C2;
+    --cor3: #5DBBF5;
+    --cor4: #A8D8F7;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    background-color: var(--cor1);
+    height: 100px;
+}
+
+header > h1 {
+    text-align: center;
+    color: white;
+    padding-top: 25px;
+    font-family: 'Righteous', cursive;
+}
+
+main {
+    font-family: 'Source Code Pro', monospace;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+#btInsert {
+    transition: 0.2s;
+    background-color: var(--cor2);
+    border-radius: 15px;
+    text-decoration: none;
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    width: 130px;
+}
+
+#btInsert > p {
+    color: white;
+}
+
+#addIcon {
+    padding-left: 7px;
+    color: white;
+}
+
+#btInsert:visited {
+    color: black;
+}
+
+#btInsert:hover {
+    border: 2px solid var(--cor3);
+    background-color: var(--cor3);
+    color: white;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+#tableUsers {
+    margin: 20px auto;
+    box-shadow: 2px 2px 17px 0px rgba(0, 0, 0, 0.25);
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+table a {
+    margin: 5px;
+    text-decoration: none;
+    padding: 5px;
+}
+
+#tableUsers i {
+    color: black;
+    height: 25px;
+}
+
+#tableUsers i:hover {
+    color: var(--cor1);
+    transition-duration: 0.1s;
+}
+
+#tableUsers th {
+    font: bold 0.95em 'PT Serif', serif;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.15);
+    background-color: var(--cor2);
+    padding: 5px 15px;
+    width: 130px;
+    color: white;
+}
+
+#tableUsers td {
+    border-right: 1px solid rgba(0, 0, 0, 0.404);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.404);
+    padding: 10px;
+    font: 0.9em 'PT Mono', monospace;
+    text-align: center;
+}
+
+td#ActionsTd {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.404);
+}
+
+tbody > tr:hover {
+    background-color: var(--cor4);
+}
+
+/*   Section User Manegement Style  */
+
+section#userManegement {
+    display: none;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    min-height: 101vh;
+    width: 100vw;
+}
+
+#form {
+    background-color: white;
+    height: 300px;
+    width: 500px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#blocker {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+#form > h2 {
+    text-align: center;
+    padding: 15px;
+    font: bold 1.45em 'PT Serif', serif;
+}
+
+#form div {
+    padding: 10px;
+    font: bold 0.95em 'PT Serif', serif;
+}
+
+#dinputs {
+    padding: 10px;
+}
+
+div.input {
+    padding: 10px;
+}
+
+div.input label {
+    padding-right: 20px;
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+div.input input {
+    padding: 3px;
+}
+
+#submitInput {
+    margin: auto;
+    display: block;
+    border: none;
+    background-color: var(--cor2);
+    border-radius: 10px;
+    transition: 0.2s;
+    font: lighter 1.1em 'Source Code Pro', monospace;
+    padding: 7px;
+    color: white;
+}
+
+#submitInput:hover {
+    cursor: pointer;
+    background-color: var(--cor3);
+    padding: 10px;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+section#userManegement.open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*   Footer Style   */
+
+footer {
+    background-color: var(--cor0);
+    padding: 7px;
+    position: fixed;
+    width: 100vw;
+    bottom: 0px;
+}
+
+footer > p {
+    text-align: center;
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+}
+
+footer > p > a {
+    text-decoration: none;
+    color: var(--cor3);
+    transition: 0.2s;
+}
+
+footer a:visited {
+    color: var(--cor3);
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor4);
+    font-size: 1.3em;
+    transition: 0.2s;
+}

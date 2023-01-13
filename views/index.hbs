@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users CRUD</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
+</head>
+<body>
+    <header>
+        <h1>Users CRUD</h1>
+    </header>
+    <main>
+        <a href="newuser" id="btInsert">
+            <p>New User</p> <i class="material-symbols-outlined" id="addIcon">person_add</i>
+        </a>
+        <section id="tableUsers">
+            <form action="/" method="POST">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>E-mail</th>
+                            <th>Gender</th>
+                            <th>Birthdate</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Username</td>
+                            <td>Example@gmail.com</td>
+                            <td>M</td>
+                            <td>12/12/2012</td>
+                            <td id="ActionsTd">
+                                <a href="#">
+                                    <i class="material-symbols-outlined" title="Edit User">edit</i>
+                                </a>
+                                <a href="#">
+                                    <i class="material-symbols-outlined" title="Delete User">delete</i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Username2</td>
+                            <td>Example2@gmail.com</td>
+                            <td>M</td>
+                            <td>12/12/2010</td>
+                            <td id="ActionsTd">
+                                <a href="#">
+                                    <i class="material-symbols-outlined" title="Edit User">edit</i>
+                                </a>
+                                <a href="#">
+                                    <i class="material-symbols-outlined" title="Delete User">delete</i>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </section>
+    </main>
+    <button onclick="showEdit()">Edit Test Button</button>
+    <section id="userManegement">
+        <div id="blocker" onclick="hideEdit()"></div>
+        <div id="form">
+            <h2>Edit UserData</h2>
+            <form action="adduser" method="POST">
+                <div id="dinputs">
+                    <div class="input">
+                        <label for="name">Name: </label>
+                        <input type="text" name="user_name" id="name" required>
+                    </div>
+                    <div class="input">
+                        <label for="email">Email: </label>
+                        <input type="email" name="user_mail" id="email" required>
+                    </div>
+                    <div class="input">
+                        <label for="gender">Gender: </label>
+                        <input type="radio" name="radioSexo" id="radioFem" value="F" checked>
+                        <label for="radioFem">Female</label>
+                        <input type="radio" name="radioSexo" id="radioMasc" value="M"> <label for="radioMasc">Male</label>
+                    </div>
+                    <div class="input">
+                        <label for="birthdate">Birthdate: </label>
+                        <input type="date" name="user_birth" id="birthdate" required>
+                    </div>
+                </div>
+                <input type="submit" id="submitInput" value="Atualizar">
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>Made by <a href="#">Vinicius Viana</a>.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
