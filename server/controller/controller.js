@@ -14,9 +14,8 @@ exports.create = (req, res) => {
     })
 
     try {
-        user.save(user, (data) => {
-            res.send(data)
-        })
+        user.save(user)
+        res.send(user)
     } catch (error) {
         res.status(500).send({message: `Error: ${error}` || 'Error while creating new user'})
     }
@@ -50,6 +49,17 @@ exports.update = async (req, res) => {
     }
 }
 
-exports.delete = (req, res) => {
+exports.delete = async (req, res) => {
+    try {
+        const id = req.params.id
+        const user = await UserDB.findByIdAndDelete(id)
+        if (!user) {
+            res.status(404).send({message: `Error while deleting user with id ${id}`})
+        } else {
+            res.send({message: "User deleted successfully"})
+        }
+    } catch (error) {
+        res.status(500).send({message: `Error User.delete(): ${error}`})
+    }
 
 }
