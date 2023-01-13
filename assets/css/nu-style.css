@@ -34,6 +34,7 @@ header > h1 {
 #btBack {
     padding: 5px;
     display: flex;
+    width: 80px;
     text-decoration: none;
     color: var(--cor1);
     transition: 0.2s;
@@ -99,7 +100,7 @@ div.input input {
     border-radius: 10px;
     transition: 0.2s;
     font: lighter 1.1em 'Source Code Pro', monospace;
-    padding: 7px;
+    padding: 10px;
     display: block;
     margin: auto;
     color: white;
@@ -108,7 +109,7 @@ div.input input {
 #submitInput:hover {
     cursor: pointer;
     background-color: var(--cor3);
-    padding: 10px;
+    padding: 16px;
     transition: 0.2s;
     font-weight: bold;
 }
