@@ -7,6 +7,9 @@ const dotenv = require('dotenv')
       dotenv.config({ path : 'config.env'}),
       PORT = process.env.PORT || 4040
 
+const connect = require('./server/database/connection')
+      connect()
+      
 const morgan = require('morgan')
 app.use(morgan('tiny'))
 
