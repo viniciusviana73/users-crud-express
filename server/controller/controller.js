@@ -23,11 +23,25 @@ exports.create = (req, res) => {
 
 
 exports.find = async (req, res) => {
-    try {
-        const user = await UserDB.find()
-        res.send(user)
-    } catch (error) {
-        res.status(500).send({message: `Error: ${error}` || 'Error while finding user'})
+    if (req.query.id) {
+        try {
+            const id = req.query.id
+            const user = await UserDB.findById(id)
+            if (!user) {
+                res.status(404).send({message: `User with id ${id} not found.`})
+            } else {
+                res.send(user)
+            }
+        } catch (error) {
+            res.status(500).send({message: `Error: ${error}` || 'Error while finding user'})
+        }
+    } else {
+        try {
+            const user = await UserDB.find()
+            res.send(user)
+        } catch (error) {
+            res.status(500).send({message: `Error: ${error}` || 'Error while finding user'})
+        }
     }
 }
 
@@ -35,7 +49,6 @@ exports.update = async (req, res) => {
     if (!req.body) {
         return res.status(400).send({message: `Empty data on update operation!`})
     }
-
     try {
         const id = req.params.id
         const user = await UserDB.findByIdAndUpdate(id, req.body)
@@ -61,5 +74,4 @@ exports.delete = async (req, res) => {
     } catch (error) {
         res.status(500).send({message: `Error User.delete(): ${error}`})
     }
-
 }
