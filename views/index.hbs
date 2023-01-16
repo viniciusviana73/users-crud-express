@@ -30,11 +30,12 @@
                         </tr>
                     </thead>
                     <tbody>
+                        {{#each users}}                        
                         <tr>
-                            <td>Username</td>
-                            <td>Example@gmail.com</td>
-                            <td>M</td>
-                            <td>12/12/2012</td>
+                            <td>{{name}}</td>
+                            <td>{{email}}</td>
+                            <td>{{gender}}</td>
+                            <td>{{birthdate}} </td>
                             <td id="ActionsTd">
                                 <a href="#">
                                     <i class="material-symbols-outlined" title="Edit User">edit</i>
@@ -44,20 +45,7 @@
                                 </a>
                             </td>
                         </tr>
-                        <tr>
-                            <td>Username2</td>
-                            <td>Example2@gmail.com</td>
-                            <td>M</td>
-                            <td>12/12/2010</td>
-                            <td id="ActionsTd">
-                                <a href="#">
-                                    <i class="material-symbols-outlined" title="Edit User">edit</i>
-                                </a>
-                                <a href="#">
-                                    <i class="material-symbols-outlined" title="Delete User">delete</i>
-                                </a>
-                            </td>
-                        </tr>
+                        {{/each}}
                     </tbody>
                 </table>
             </form>
