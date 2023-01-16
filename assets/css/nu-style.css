@@ -92,6 +92,17 @@ label:hover {
 
 div.input input {
     padding: 3px;
+    border: 1px solid var(--cor0);
+    color: var(--cor0);
+}
+
+div.input input:focus {
+    outline: 0;
+    border: 1px solid var(--cor2);
+}
+
+input[type=text], input[type=email] {
+    width: 250px;
 }
 
 #submitInput {
@@ -135,6 +146,7 @@ footer > p {
 footer > p > a {
     text-decoration: none;
     color: var(--cor3);
+    transition: 0.2s;
 }
 
 footer a:visited {
@@ -144,4 +156,6 @@ footer a:visited {
 footer a:hover {
     text-decoration: underline;
     color: var(--cor4);
+    font-size: 1.3em;
+    transition: 0.2s;
 }
