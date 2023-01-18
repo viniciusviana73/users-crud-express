@@ -107,7 +107,12 @@ table a {
     color: white;
 }
 
-#tableUsers td {
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+td.tusername, td.tusermail, td.tusergender, td.tuserbirth {
     border-right: 1px solid rgba(0, 0, 0, 0.404);
     border-bottom: 1px solid rgba(0, 0, 0, 0.404);
     padding: 10px;
@@ -115,9 +120,17 @@ table a {
     text-align: center;
 }
 
-td#ActionsTd {
+td.tusername {
+    width: 320px;
+}
+
+.ActionsTd {
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.404);
+}
+
+.btEdit:hover {
+    cursor: pointer;
 }
 
 tbody > tr:hover {

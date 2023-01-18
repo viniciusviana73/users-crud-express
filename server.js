@@ -18,8 +18,16 @@ app.use(morgan('tiny'))
 const bodyparser = require('body-parser')
 app.use(bodyparser.urlencoded({ extended : true }))
 
+// To deal with JSON req.body
+app.use(express.json())
+
 // Setting view engine
 app.set('view engine', 'hbs')
+
+// Handlebars helpers
+const Handlebars = require('hbs')
+const H = require('just-handlebars-helpers')
+H.registerHelpers(Handlebars)
 
 // Setting assets folders
 app.use('/css', express.static(path.resolve(__dirname, "assets/css")))

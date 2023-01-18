@@ -15,12 +15,11 @@ exports.create = (req, res) => {
 
     try {
         user.save(user)
-        res.send(user)
+        res.redirect('/')
     } catch (error) {
         res.status(500).send({message: `Error: ${error}` || 'Error while creating new user'})
     }
 }
-
 
 exports.find = async (req, res) => {
     if (req.query.id) {
