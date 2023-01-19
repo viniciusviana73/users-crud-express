@@ -40,9 +40,9 @@
                                 <span class="btEdit" onclick="loadUserdata('{{_id}}')">
                                     <i class="material-symbols-outlined" title="Edit User" translate="no">edit</i>
                                 </span>
-                                <a href="#" onclick="alert('{{_id}}')" data-id="{{_id}}">
+                                <span onclick="delete_user('{{_id}}')" data-id="{{_id}}">
                                     <i class="material-symbols-outlined" title="Delete User" translate="no">delete</i>
-                                </a>
+                                </span>
                             </td>
                         </tr>
                         {{/each}}

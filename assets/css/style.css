@@ -129,7 +129,11 @@ td.tusername {
     border-bottom: 1px solid rgba(0, 0, 0, 0.404);
 }
 
-.btEdit:hover {
+.ActionsTd span {
+    padding: 0px 5px;
+}
+
+.ActionsTd span:hover {
     cursor: pointer;
 }
 

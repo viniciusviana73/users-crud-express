@@ -96,3 +96,27 @@ inputSubmit.onclick = (event) => {
     event.preventDefault()
     update_user()
 }
+
+/*   Delete User   */
+
+async function delete_user(id) {
+    if (confirm("Confirm delete?")) {
+        try {
+            // URL for the request
+            const url = document.URL + `api/users/${id}`
+    
+            // DELETE request
+            await fetch(url, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json;charset=utf-8'
+                }
+            })
+    
+            // reload the page
+            location.reload()
+        } catch (error) {
+            console.log(error)
+        }
+    }     
+}
