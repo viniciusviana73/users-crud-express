@@ -26,7 +26,7 @@ header {
     height: 100px;
 }
 
-header > h1 {
+header>h1 {
     text-align: center;
     color: white;
     padding-top: 25px;
@@ -51,7 +51,7 @@ main {
     width: 130px;
 }
 
-#btInsert > p {
+#btInsert>p {
     color: white;
 }
 
@@ -75,11 +75,13 @@ main {
 #tableUsers {
     margin: 20px auto;
     box-shadow: 2px 2px 17px 0px rgba(0, 0, 0, 0.25);
+    overflow-x: auto;
 }
 
 table {
     width: 100%;
     border-spacing: 0;
+    border-collapse: collapse;
 }
 
 table a {
@@ -112,16 +114,15 @@ td {
     text-align: center;
 }
 
-td.tusername, td.tusermail, td.tusergender, td.tuserbirth {
+td.tusername,
+td.tusermail,
+td.tusergender,
+td.tuserbirth {
     border-right: 1px solid rgba(0, 0, 0, 0.404);
     border-bottom: 1px solid rgba(0, 0, 0, 0.404);
     padding: 10px;
     font: 0.9em 'PT Mono', monospace;
     text-align: center;
-}
-
-td.tusername {
-    width: 320px;
 }
 
 .ActionsTd {
@@ -137,7 +138,7 @@ td.tusername {
     cursor: pointer;
 }
 
-tbody > tr:hover {
+tbody>tr:hover {
     background-color: var(--cor4);
 }
 
@@ -177,7 +178,7 @@ section#userManegement {
     left: 0;
 }
 
-#form > h2 {
+#form>h2 {
     text-align: center;
     padding: 15px;
     font: bold 1.45em 'PT Serif', serif;
@@ -211,7 +212,8 @@ div.input input {
     outline: 0;
 }
 
-input[type=text], input[type=email] {
+input[type=text],
+input[type=email] {
     width: 220px;
 }
 
@@ -255,13 +257,13 @@ footer {
     bottom: 0px;
 }
 
-footer > p {
+footer>p {
     text-align: center;
     color: white;
     font-family: 'Source Code Pro', monospace;
 }
 
-footer > p > a {
+footer>p>a {
     text-decoration: none;
     color: var(--cor3);
     transition: 0.2s;
@@ -276,4 +278,38 @@ footer a:hover {
     color: var(--cor4);
     font-size: 1.3em;
     transition: 0.2s;
+}
+
+@media only screen and (max-width: 640px) {
+
+    thead tr {
+        display: none;
+    }
+
+    td {
+        border: none;
+        position: relative;
+        display: block;
+    }
+
+    td.tusername {
+        border-top: 4px solid var(--cor1);
+    }
+
+    td.tusername, td.tusermail, td.tusergender, td.tuserbirth {
+        border-right: none;
+    } 
+
+    section#userManegement {
+        padding: 20px;
+    }
+
+    #form {
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    #inputGender {
+        display: flex;
+    }
 }
