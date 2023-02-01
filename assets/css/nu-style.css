@@ -159,3 +159,22 @@ footer a:hover {
     font-size: 1.3em;
     transition: 0.2s;
 }
+
+@media only screen and (max-width: 640px) {
+    div.input {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    div.input label {
+        margin-bottom: 5px;
+    }
+
+    label#genderlb {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+}
