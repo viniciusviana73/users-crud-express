@@ -54,6 +54,7 @@
     <section id="userManegement">
         <div id="blocker" onclick="hideEdit()"></div>
         <div id="form">
+            <span class="material-symbols-outlined" id="editCloseBt" onclick="hideEdit()">keyboard_backspace</span>
             <h2>Edit UserData</h2>
             <form method="post">
                 <div id="dinputs">
@@ -67,7 +68,7 @@
                         <input type="email" name="email" id="email" required>
                     </div>
                     <div id="inputGender" class="input">
-                        <label for="gender">Gender: </label>
+                        <label for="gender" id="genderlb">Gender: </label>
                         <input type="radio" name="gender" id="radioFem" value="F" checked>
                         <label for="radioFem">Female</label>
                         <input type="radio" name="gender" id="radioMasc" value="M">
@@ -80,7 +81,7 @@
                         <input type="datetime-local" name="user_birth" id="birthdate" required>
                     </div>
                 </div>
-                <input type="submit" id="submitInput" value="Atualizar">
+                <input type="submit" id="submitInput" value="Update">
             </form>
         </div>
     </section>

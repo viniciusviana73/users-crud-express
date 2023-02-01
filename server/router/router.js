@@ -1,5 +1,4 @@
-const express = require('express'),
-      route = express.Router()
+const route = require('express').Router()
 
 const services = require('../services/render'),
       controller = require('../controller/controller')
