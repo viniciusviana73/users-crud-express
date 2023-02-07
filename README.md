@@ -15,20 +15,18 @@
 - [Edit An Existing User](https://user-images.githubusercontent.com/54729152/214446958-eeab62a9-ba90-495e-b556-f5ad415ce13b.png)
 - [Register New User](https://user-images.githubusercontent.com/54729152/214446656-cb1c57b6-e629-429f-81b0-7ddd8b4d949d.png)
  
-## To run the project
+## Running the project
 
-### Requisites:
+### Pre-Requisites:
 - Node.js
 - MongoDB
 - Visual Studio Code
 
-To run this project on your machine, you can clone or download this repository so you will get the files into your computer.
+1. Clone or download this repository so you will get the files into your computer.
 
-After that, open the project folder on VSCode, then open the terminal. 
+2. Open the project folder on VSCode, then open the terminal. 
 
-So, run this command to install all the dependencies:
-  
-    npm install
+3. Run the ***npm install*** command to install all the dependencies.    
     
 Express, mongoose, axios, hbs, and all dependencies is going to be downloaded after you run this cmd. You can check dependencies on package.json, at the line 26:
 
@@ -44,16 +42,16 @@ Express, mongoose, axios, hbs, and all dependencies is going to be downloaded af
     "nodemon": "^2.0.20"
     }
     
-So, now you got all the dependencies. All you gotta do now is to create the 'config.env' file (on root directory). This config file is going to contain PORT and MONGO_URI variables.
+4. So, now you got all the dependencies. All you gotta do now is to create the 'config.env' file (on root directory). This config file is going to contain PORT and MONGO_URI variables.
 
 You can set this config.env like this:
 
     PORT=3000
-    MONGO_URI={Link Of Your Mongo, whatever if its Atlas or Localhost URI}
+    MONGO_URI={Link Of Your Mongo, whatever if its Atlas (Cloud) or Localhost URI}
     
-Now, you are ready to run the project. Just go back to terminal and run the following command:
+5. Now, you are ready to run the project. Just go back to terminal and run this following command:
 
-    npm start
+    **npm start**
     
 Then you will see nodemon starting the server, and then 'Server is running on http://localhost:3000' (Or whatever PORT you choose on 'config.env').
 
